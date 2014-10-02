@@ -1,0 +1,2 @@
+/etc/tomcat7/tomcat-users.xml
+    manager - miau

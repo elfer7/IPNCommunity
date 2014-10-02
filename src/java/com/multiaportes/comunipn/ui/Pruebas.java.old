@@ -1,0 +1,20 @@
+package com.multiaportes.comunipn.ui;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import com.multiaportes.comunipn.sistema.RutaComunIPN;
+import com.multiaportes.comunipn.sistema.xml.*;
+
+public class Pruebas extends HttpServlet
+{
+    protected void doGet(HttpServletRequest peticion, HttpServletResponse respuesta) throws ServletException, IOException
+    {
+        EscritorXML w = new EscritorXML(RutaComunIPN.getRutaAbs(peticion.getSession())+"/recursos/prueba.xml");
+        w.setValor("/usuario/porno/xd", "miau", "labergonia");
+        LectorXML x = new LectorXML(RutaComunIPN.getRutaAbs(peticion.getSession())+"/recursos/prueba.xml");
+        respuesta.getWriter().write(x.getValor("/usuario/porno/xd", "miau"));
+        respuesta.getWriter().write(RutaComunIPN.getRutaAbs(peticion.getSession())+"/recursos/prueba.xml");
+        //respuesta.getWriter().write(RutaComunIPN.getRutaRel(peticion.getSession())+"/recursos/prueba.xml");
+    }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT usuarios (usuario)*>
+<!ELEMENT usuario EMPTY>
+
+<!ATTLIST usuario
+id NMTOKEN #REQUIRED
+nickname NMTOKEN #REQUIRED
+password NMTOKEN #REQUIRED
+eliminado (true|false) #REQUIRED
+> 

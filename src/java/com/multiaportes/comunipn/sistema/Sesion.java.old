@@ -1,0 +1,35 @@
+package com.multiaportes.comunipn.sistema;
+
+import javax.servlet.http.HttpSession;
+
+// No se implemento con el patron Singleton porque podria ser un agujero de seguridad que la misma sesion
+// de un usuario permanezca solo una vez en la memoria del servidor y esta sesion sea accesible por cualquier otro usuario
+
+public class Sesion
+{
+    private HttpSession sesion;
+    private String id;
+    
+    public Sesion(HttpSession sesion, String id) //peticion.getSession()
+    {
+        this.sesion = sesion;
+        this.id = id;
+    }
+    
+    public boolean verificarSesionActiva()
+    {
+        return this.sesion.getAttribute("id").equals(this.id);
+    }
+    
+    public void crearSesion() //if registro_exitoso: respuesta.sendRedirect("/modificarDatos.html") else respuesta.sendRedirect("/index (SHOW LATEST PREGUNTAS)")
+    {
+        //if(!this.verificarSesionActiva())
+            this.sesion.setAttribute("id", this.id);
+    }
+    
+    public void destruirSesion() // respuesta.sendRedirect("/index (SHOW LANDING PAGE REGISTRO)");
+    {
+        //if(this.verificarSesionActiva())
+            this.sesion.invalidate();
+    }
+}

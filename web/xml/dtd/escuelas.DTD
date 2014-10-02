@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT escuelas (escuela)*>
+
+<!ELEMENT escuela EMPTY>
+
+<!ATTLIST escuela
+id NMTOKEN #REQUIRED>

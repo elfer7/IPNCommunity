@@ -1,0 +1,10 @@
+@font-face
+{
+    font-family: CIPN-landscape;
+    src: url('http://localhost:8084/ComunIPN/recursos/fonts/oswald.ttf') format('truetype'); /* URL relativa no funciona en el jodido Firefox*/
+}
+@font-face
+{
+    font-family: CIPN;
+    src: url('http://localhost:8084/ComunIPN/recursos/fonts/dsans.ttf') format('truetype'); /* URL relativa no funciona en el jodido Firefox*/
+}

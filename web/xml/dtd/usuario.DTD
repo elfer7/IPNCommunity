@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT usuario (informacion,seguidores,siguiendo,favoritos)>
+
+<!ELEMENT informacion  (persona,avatar,links,escuelas)>
+
+<!ELEMENT persona EMPTY>
+
+<!ELEMENT avatar EMPTY>
+
+<!ELEMENT links (facebook,twitter,website) >
+<!ELEMENT facebook EMPTY>
+<!ELEMENT twitter EMPTY>
+<!ELEMENT website EMPTY>
+
+<!ELEMENT escuelas (vocacional,superior)>
+<!ELEMENT vocacional EMPTY>
+<!ELEMENT superior EMPTY>
+
+<!ELEMENT seguidores (user)*>
+<!ELEMENT siguiendo (user)*>
+<!ELEMENT user EMPTY>
+
+<!ELEMENT favoritos (pregunta)*>
+<!ELEMENT pregunta EMPTY>
+
+<!ATTLIST usuario
+id NMTOKEN #REQUIRED
+>
+
+<!ATTLIST persona
+nombre NMTOKEN #REQUIRED
+apellidos NMTOKEN #REQUIRED
+email NMTOKEN #REQUIRED
+>
+
+<!ATTLIST avatar
+url CDATA #REQUIRED>
+
+<!ATTLIST facebook
+url CDATA #IMPLIED>
+
+<!ATTLIST twitter
+url CDATA #IMPLIED>
+
+<!ATTLIST website
+url CDATA #IMPLIED>
+
+<!ATTLIST vocacional
+nombre NMTOKEN #REQUIRED
+carrera NMTOKEN #REQUIRED
+inicio NMTOKEN #REQUIRED
+fin NMTOKEN #REQUIRED>
+
+<!ATTLIST superior
+id NMTOKENS #REQUIRED
+carrera NMTOKENS #REQUIRED
+inicio NMTOKENS #REQUIRED
+fin CDATA #REQUIRED>
+
+<!ATTLIST user
+id NMTOKEN #REQUIRED>
+
+<!ATTLIST pregunta
+id NMTOKEN #REQUIRED
+usuario NMTOKEN #REQUIRED>

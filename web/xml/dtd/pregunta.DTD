@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pregunta (fecha,categoria,votos,contenido,tags,relacionados)>
+
+<!ELEMENT fecha EMPTY>
+
+<!ELEMENT categoria (#PCDATA) >
+
+<!ELEMENT votos (positivos,negativos)>
+<!ELEMENT positivos (#PCDATA)>
+<!ELEMENT negativos (#PCDATA)>
+
+<!ELEMENT contenido (#PCDATA)>
+
+<!ELEMENT tags  (tag)*>
+<!ELEMENT tag EMPTY>
+
+<!ELEMENT relacionados (question)*>
+<!ELEMENT question EMPTY>
+
+<!ATTLIST pregunta
+titulo CDATA #REQUIRED
+id NMTOKEN #REQUIRED
+finalizada (true|false) #REQUIRED>
+
+<!ATTLIST fecha
+dia NMTOKEN #REQUIRED
+mes NMTOKEN #REQUIRED
+anio NMTOKEN #REQUIRED
+hora NMTOKEN #REQUIRED
+minuto NMTOKEN #REQUIRED
+>
+
+<!ATTLIST categoria
+id NMTOKEN #REQUIRED>
+
+<!ATTLIST usuario
+id NMTOKEN #REQUIRED>
+
+<!ATTLIST tag
+nombre NMTOKEN #REQUIRED>
+
+<!ATTLIST question
+id NMTOKEN #REQUIRED>

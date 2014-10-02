@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pregunta id="" titulo="" usuario="">
+	<fecha dia="" mes="" anio="" hora="" minuto=""/>
+	<categoria id="" />
+	<contenido>
+		<![CDATA[
+		]]>
+	</contenido>
+	<tags>
+	</tags>
+</pregunta>

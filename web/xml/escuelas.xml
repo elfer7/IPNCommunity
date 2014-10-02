@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<escuelas>
+	<escuela id="voca1" categoria="0"/>
+	<escuela id="voca2" categoria="0"/>
+	<escuela id="voca3" categoria="0"/>
+	<escuela id="voca4" categoria="0"/>
+	<escuela id="voca7" categoria="0"/>
+	<escuela id="voca8" categoria="0"/>
+	<escuela id="voca9" categoria="0"/>
+	<escuela id="voca10" categoria="0"/>
+	<escuela id="voca11" categoria="0"/>
+	<escuela id="voca16" categoria="0"/>
+	<escuela id="cet1" categoria="0"/>
+	<escuela id="escom" categoria="0"/>
+	<escuela id="esimez" categoria="0"/>
+	<escuela id="esiaz" categoria="0"/>
+	<escuela id="encb" categoria="1"/>
+	<escuela id="voca6" categoria="1"/>
+	<escuela id="voca15" categoria="1"/>
+	<escuela id="upiicsa" categoria="2"/>
+	<escuela id="voca5" categoria="3"/>
+	<escuela id="voca12" categoria="3"/>
+	<escuela id="voca13" categoria="3"/>
+	<escuela id="voca14" categoria="3"/>
+</escuelas>

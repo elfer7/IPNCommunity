@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT preguntas (pregunta)*>
+<!ELEMENT pregunta EMPTY>
+
+<!ATTLIST pregunta
+id NMTOKEN #REQUIRED
+titulo CDATA #REQUIRED
+usuario NMTOKEN #REQUIRED
+> 

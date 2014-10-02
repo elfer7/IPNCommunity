@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT tags (tag)*>
+<!ELEMENT tag (pregunta)*>
+<!ELEMENT pregunta EMPTY>
+
+<!ATTLIST tag
+nombre NMTOKEN #REQUIRED
+>
+
+<!ATTLIST pregunta
+id NMTOKEN #REQUIRED
+titulo CDATA #REQUIRED
+usuario NMTOKEN #REQUIRED
+> 

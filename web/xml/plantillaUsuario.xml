@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuario id="">
+  <informacion>
+    <persona nombre="" apellidos="" email=""/>
+    <avatar url="" />
+    <links>
+      <facebook url="" />
+      <twitter url="" />
+      <website url="" />
+    </links>
+  </informacion>
+  <escuelas>
+    <vocacional nombre="" carrera="" inicio="" fin="" />
+    <superior nombre="" carrera="" inicio="" fin="" />
+  </escuelas>
+  <siguiendo />
+  <seguidores />
+  <favoritos />
+</usuario>

@@ -1,0 +1,126 @@
+/*
+    Hoja de estilos para el proyecto ComunIPN
+    Por Eder Or - multiaportes.com
+*/
+@import url('fuentes.css');
+
+body
+{
+    background-color: #6C1A42;
+}
+input
+{
+    outline: none;
+}
+.landscape-CIPN
+{
+    background-color: #6C1A42;
+    /*
+    background-image: url(/recursos/img/wp4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+}
+.landscape
+{
+    color: #FFF;
+    font-family: CIPN-landscape;
+}
+.logo-full
+{
+    font-size: 70px;
+    text-shadow: 0 0 5px;
+}
+.eslogan
+{
+    margin-top: 60px;
+    font-size: 30px;
+}
+.formRegistro
+{
+    border: none;
+    border-bottom: 1px solid #FFF;
+    background-color: #6C1A42;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    transition: border 0.1s ease-out;
+}
+.formRegistro:focus
+{
+    transition: border 0.1s ease-in;
+    border-bottom: 3px solid #FFF;
+}
+.formRegistro::-webkit-input-placeholder
+{
+    color: #DDD;
+}
+.formRegistro:focus::-webkit-input-placeholder
+{
+    color: transparent;
+}
+.formRegistro::placeholder
+{
+    color: #FFF;
+}
+#formulario-registro
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#registrarBtn
+{
+    padding: 40px;
+    margin-top: 30px;
+    color: #6C1A42;
+    background-color: #FFF;
+    width: 350px;
+    font-size: 25px;
+}
+.footer
+{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    padding: 25px;
+    background-color: #FFF;
+    box-shadow: inset 0 30px 30px -30px #000;
+}
+.links-footer
+{
+    transition: text-shadow 0.1s ease-in;
+    font-family: CIPN-landscape;
+    color: #444;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px;
+}
+.links-footer:hover
+{
+    transition: text-shadow 0.1s ease-in;
+    text-shadow: 0 0 10px #6C1A42;
+    text-decoration: none;
+    color: #6C1A42;
+}
+#footer-izq
+{
+    float: left;
+}
+#footer-der
+{
+    float: right;
+    color: #FF2600;
+    font-family: CIPN-landscape;
+    font-size: 16px;
+}
+.limpiar
+{
+    clear: both;
+}
+.ma-logo
+{
+    width: 24px;
+    height: 24px;
+}

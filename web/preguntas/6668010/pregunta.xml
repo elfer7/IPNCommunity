@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pregunta id="27546802" titulo="Ejemplo de pregunta" usuario="686620">
+	<fecha dia="8" mes="5" anio="2014" hora="17" minuto="25"/>
+	<categoria id="1" />
+	<contenido>
+		Esto es una pregunta de prueba
+	</contenido>
+	<tags>
+	</tags>
+</pregunta>

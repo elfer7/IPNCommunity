@@ -1,0 +1,3 @@
+MODELO = ¿?
+VISTA = /ui
+CONTROLADOR = /sistema

@@ -1,0 +1,49 @@
+package com.multiaportes.comunipn.sistema.usuarios;
+
+import com.multiaportes.comunipn.sistema.RutaComunIPN;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class NuevaRespuesta extends HttpServlet {
+@Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        HttpSession session=request.getSession();
+        String ruta=RutaComunIPN.getRutaAbs(session);
+        
+        long idU=15455525;
+        long idR=1;
+        long idP=20002010;
+        long idUR=4500250;
+        
+        AnswerXML respuesta=new AnswerXML(ruta);
+        
+        String contenido=request.getParameter("contenido");
+        
+        respuesta.CrearRespuesta(idR, idU, idP,idUR, contenido);
+        
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<META http-equiv=\"refresh\" content=\"5;index.html\">"); 
+            out.println("</head>");
+            out.println("<body>");
+            
+                out.println("<br>");
+                out.println("En unos momentos sera redirigido a la pagina principal"); 
+                
+            out.println("</body>");
+            out.println("</html>");
+
+    }
+
+}

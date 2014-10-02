@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    Diseño del proyecto ComunIPN
+    Por Eder Ortega - multiaportes.com
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>ComunIPN</title>
+        <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="recursos/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="recursos/css/estilosIPN.css">
+        <link rel="stylesheet" type="text/css" href="recursos/css/bootstrap-dialog.css">
+    </head>
+    <body>
+        <header class="landscape-CIPN">
+            <div class="container">
+                <h1 class="landscape logo-full">ComunIPN</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h2 class="landscape eslogan">&Uacute;nete a la comunidad virtual para polit&eacute;cnicos</h2>
+                    </div>
+                    <div id="formulario-registro" class="landscape">
+                        <form id="formulario" action="registrar" method="POST">
+                            <input type="text" id="nm" name="nm" class="formRegistro" placeholder="Nombre" size="20" maxlength="15" style="text-transform: capitalize;" onblur="registroValidar(this, 'nombre')">
+                            <input type="text" id="ap" name="ap" class="formRegistro" placeholder="Apellido" size="20" maxlength="15" style="text-transform: capitalize;" onblur="registroValidar(this, 'apellido')">
+                            <br/>
+                            <input type="text" id="ml" name="ml" class="formRegistro" placeholder="Correo electr&oacute;nico" size="48" maxlength="40" onblur="registroValidar(this, 'email')">
+                            <br/>
+                            <input type="text" id="usr" name="usr" class="formRegistro" placeholder="Nombre de usuario" size="20" maxlength="15" onblur="registroValidar(this, 'usuario')">
+                            <input type="password" id="pswd" name="pswd" class="formRegistro" placeholder="Contrase&ntilde;a" size="20" maxlength="12" onblur="registroValidar(this, 'clave')">
+                            <input type="hidden" id="hashPs" name="hashPs" value="">
+                            <br/>
+                            <br/>
+                            <button type="button" class="btn btn-default btn-lg" onclick="makeAlta()" href="#">Registrar nueva cuenta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer class="footer">
+            <div id="footer-izq">
+                <a class="links-footer" title="Inicio" href="index.html">Inicio</a>
+                <a class="links-footer" title="Créditos" href="creditos.html">Cr&eacute;ditos</a>
+                <a class="links-footer" title="Tutorial" href="tutorial.html">Tutorial</a>
+                <a class="links-footer" title="Blog" href="http://comunipn.multiaportes.com/">Blog</a>
+                <a class="links-footer" title="Iniciar sesión" onclick="iniciarSesion()" href="#">Iniciar sesi&oacute;n</a>
+            </div>
+            <div id="footer-der">
+                <i class="fa fa-code"></i> con <i class="fa fa-heart"></i> por <a href="http://www.multiaportes.com/" title="MultiAportes"><img src="recursos/img/multiaportes.png" class="ma-logo"/></a>
+            </div>
+            <div class="limpiar" />
+        </footer>
+        <script type="text/javascript" src="recursos/js/comunipn-ajax.js"></script>
+        <script type="text/javascript" src="recursos/js/comunipn-validar.js"></script>
+        <script type="text/javascript" src="recursos/js/comunipn-(in)seguridad.js"></script>
+        <script type="text/javascript" src="recursos/js/multiaportes-sha.js"></script>
+        <script type="text/javascript" src="recursos/js/multiaportes-sha1.js"></script>
+        <script type="text/javascript" src="recursos/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="recursos/js/bootstrap.js"></script>
+        <script type="text/javascript" src="recursos/js/bootstrap-dialog.js"></script>
+        <script type="text/javascript">
+            function cargarTooltips()
+            {
+                $('a').attr('data-toggle', 'tooltip');
+                $('a').attr('data-placement', 'top');
+                $('a').tooltip();
+            }
+            function iniciarSesion()
+            {
+                BootstrapDialog.show(
+                    {
+                        title: 'Iniciar sesi&oacute;n',
+                        message: $('<form id="inicioSes" role="form" action="login" method="POST"><input type="text" class="form-control" name="usuario" id="us-lg" placeholder="Usuario"><br/><input type="password" class="form-control" name="clave" id="pw-lg" placeholder="Contraseña"><input type="hidden" id="pw-lg-h" name="claveh" value=""></form>'),
+                        buttons: [
+                            {
+                                label: 'Iniciar sesi&oacute;n',
+                                cssClass: 'btn-primary',
+                                action: function()
+                                {
+                                    makeLogin();
+                                }
+                            }
+                        ]
+                    }
+                );
+            }
+            $(document).ready(cargarTooltips()); // Funcion de retrollamada 'callback'
+        </script>
+    </body>
+</html>

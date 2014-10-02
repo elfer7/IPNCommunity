@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE escuela SYSTEM "C:\escuela.dtd" >-->
+<escuela id="cecyt3" tipo="vocacional">
+  <informacion>
+    <nombre>"Estanislao Ramirez Ruiz"</nombre>
+    <ubicacion>Av. Central, Valle de Ecatepec</ubicacion>
+    <escudo url="escudo.jpg" />
+    <cover url="cover.jpg" />
+  </informacion>
+  <carreras>
+    <carrera id="AERO">Aeronautica</carrera>
+    <carrera id="COMP">Computacion</carrera>
+    <carrera id="MAC">Manufactura Asistida por Computadora</carrera>
+    <carrera id="SA">Sistemas Automotrices</carrera>
+    <carrera id="SCE">Sistemas de Control Electrico</carrera>
+    <carrera id="SD">Sistemas Digitales</carrera>
+  </carreras>
+  <estudiantes />
+  <profesores />
+</escuela>

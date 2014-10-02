@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<escuela id="escom" tipo="superior">
+<informacion>
+<nombre>"Escuela Superior de Computo"</nombre>
+<ubicacion>"Lindavista, DF"</ubicacion>
+<escudo url="avatar.jpg" />
+<cover url="cover.jpg" />
+</informacion>
+<carreras>
+<carrera id="ISC">Ingenieria en Sistemas Computacionales</carrera>
+</carreras>
+<estudiantes>	
+</estudiantes>
+<profesores>
+</profesores>
+</escuela>
+	
+		
+	
+	
+	
+		
+		
+	
+	
+	
+	
+		
+	
+	
+	
+	
+
+	
+	
+	
+
+	

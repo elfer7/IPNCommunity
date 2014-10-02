@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<usuario id="686664832">
+	<informacion>
+		<persona nombre="Ignoracio" apellidos="Club" />
+		<avatar url="https://lh3.googleusercontent.com/-fvguxdkQR4c/AAAAAAAAAAI/AAAAAAAAACY/p9_mUkNTbsU/s120-c/photo.jpg" />
+		<links>
+			<facebook url="MultiAportes" />
+			<twitter url="MultiAportes" />
+			<website url="www.multiaportes.com" />
+		</links>
+		<escuelas>
+			<vocacional nombre="V3" carrera="COMP" inicio="2009" fin="2012" />
+			<superior id="ESCOM" carrera="ISC" inicio="2012" fin="" />
+		</escuelas>
+	</informacion>
+	<seguidores>
+		<usuario id="86473920" />
+	</seguidores>
+	<siguiendo>
+		<usuario id="86473920" />
+		<usuario id="6666667" />
+	</siguiendo>
+	<favoritos>
+		<pregunta id="1043627" usuario="858474984" />
+		<pregunta id="6457302" usuario="885937459" />
+	</favoritos>
+</usuario>

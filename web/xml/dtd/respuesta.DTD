@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT respuesta (fecha,votos,contenido)>
+
+<!ELEMENT fecha EMPTY>
+
+<!ELEMENT votos (positivos,negativos)>
+<!ELEMENT positivos (#PCDATA)>
+<!ELEMENT negativos (#PCDATA)>
+
+<!ELEMENT contenido (#PCDATA)>
+
+<!ELEMENT menciones (usuario)*>
+
+<!ATTLIST respuesta
+id NMTOKEN #REQUIRED
+usuario NMTOKEN #REQUIRED
+>
+
+<!ATTLIST fecha
+dia NMTOKEN #REQUIRED
+mes NMTOKEN #REQUIRED
+anio NMTOKEN #REQUIRED
+hora NMTOKEN #REQUIRED
+minuto NMTOKEN #REQUIRED
+>

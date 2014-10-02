@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT escuela (informacion,carreras,estudiantes,profesores)>
+
+<!ELEMENT informacion  (nombre,ubicacion,escudo,cover)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT escudo EMPTY >
+<!ELEMENT cover EMPTY>
+
+<!ELEMENT carreras  (carrera)*>
+<!ELEMENT carrera (#PCDATA)>
+
+<!ELEMENT estudiantes (usuario)*>
+<!ELEMENT profesores (usuario)*>
+<!ELEMENT usuario EMPTY>
+
+<!ATTLIST escuela
+id NMTOKEN #REQUIRED
+tipo (superior|voacional) #REQUIRED>
+
+<!ATTLIST escudo
+url CDATA #REQUIRED>
+
+<!ATTLIST cover
+url CDATA #REQUIRED>
+
+<!ATTLIST carrera
+id NMTOKEN #REQUIRED>
+
+<!ATTLIST usuario
+id NMTOKEN #REQUIRED>

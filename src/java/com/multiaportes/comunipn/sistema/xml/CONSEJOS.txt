@@ -1,0 +1,3 @@
+http://www.w3schools.com/xpath/xpath_syntax.asp
+
+XPATH RUTAS: /usuarios/usuario[1], [2], last(), ETC

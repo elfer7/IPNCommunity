@@ -1,0 +1,71 @@
+package com.multiaportes.comunipn.admin;
+
+import java.sql.*;
+
+//Patron Singleton
+public class ConexionDB
+{
+    private static ConexionDB conexDB = null;
+    private static Connection conexion;
+    private static Statement zz; // 'Declaracion': permite ejecutar comandos SQL a la DB
+    //private static ResultSet rs; // Almacena los datos de la DB conforme los vayamos pidiendo
+
+    private ConexionDB()
+    {
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost/comunipn", "root", "");
+            zz = conexion.createStatement();
+        }
+        catch(SQLException x)
+        {
+            System.err.println("Error SQL: "+x.getMessage());
+        }
+        catch(ClassNotFoundException xx)
+        {
+            System.err.println("Error: "+xx.getMessage());
+        }
+    }
+
+    public static void cerrarConexion()
+    {
+        try
+        {
+            conexion.close();
+        }
+        catch(SQLException x)
+        {
+            System.err.println("Error SQL: "+x.getMessage());
+        }
+    }
+    public static ConexionDB obtenerConexion()
+    {
+        if(conexDB == null)
+            conexDB = new ConexionDB();
+        return conexDB;
+    }
+    public static ResultSet makeQuery(String comando)
+    {
+        try
+        {
+            return zz.executeQuery(comando);
+        }
+        catch(SQLException x)
+        {
+            System.err.println("Error SQL: "+x.getMessage());
+        }
+        return null;
+    }
+    public static void makeUpdate(String comando)
+    {
+        try
+        {
+            zz.execute(comando); // executeUpdate
+        }
+        catch(SQLException x)
+        {
+            System.err.println("Error SQL: "+x.getMessage());
+        }
+    }
+}
